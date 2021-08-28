@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <script src="./exp.js" defer></script>
+    <script src="./storage.js" defer></script>
+    <style>
+        button{
+            width: 100px;
+            height: 30px;
+            cursor: pointer;
+        }
+        input{
+            margin: 20px 0;
+        }
+        .short-info{
+            background-color: yellowgreen;
+        }
+        .hide{
+            display: none;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .right, form{
+            width: 30%;
+        }
+        .left{
+            width: 20%;
+        }
+        .user-wrapper{
+            background-color: thistle;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#" id="newUserForm">
+            <input type="text" name='name' id='name' placeholder="name">
+            <br>
+            <input type="tel" name='phone' id='phone' placeholder="phone">
+            <br>
+            <input type="email" name='email' id='email' placeholder="email">
+            <br>
+            <button id='submit'>Add</button>
+        </form>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
