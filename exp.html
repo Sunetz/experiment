@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,39 +9,113 @@
     <script src="./exp.js" defer></script>
     <script src="./storage.js" defer></script>
     <style>
-        button{
-            width: 100px;
-            height: 30px;
-            cursor: pointer;
-        }
-        input{
+        input {
             margin: 20px 0;
+            padding: 10px;
+            border-radius: 5px;
         }
-        .short-info{
-            background-color: yellowgreen;
+
+        .short-info {
+            background-color: rgb(222, 236, 241);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+            width: 250px;
+            margin-left: 30px;
+
+
         }
-        .hide{
+
+        .hide {
             display: none;
         }
-        .wrapper{
+
+        .wrapper {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
+            font-family: 'Courier New', Courier, monospace;
         }
-        .right, form{
+
+        .right {
+            margin-top: 50px;
+        }
+
+        .left {
             width: 30%;
+
         }
-        .left{
-            width: 20%;
-        }
-        .user-wrapper{
+
+        .user-wrapper {
             background-color: thistle;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        button {
+            cursor: pointer;
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .delete {
+            background-color: crimson;
+        }
+
+        form {
+            text-align: center;
+            padding: 30px;
+            width: 30%;
+            border-right: 1px darkgray dashed;
+        }
+
+        #submit {
+            background-color: yellowgreen;
+        }
+
+        .lds-dual-ring {
+            margin-top: 100px;
+            margin-left: 100px;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid yellowgreen;
+            border-color: yellowgreen transparent yellowgreen transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="wrapper">
+
         <form action="#" id="newUserForm">
+            <h1>Enter a new contact</h1>
+            <!-- <input type="file" class="upload" id="photo-upload"/> -->
             <input type="text" name='name' id='name' placeholder="name">
             <br>
             <input type="tel" name='phone' id='phone' placeholder="phone">
@@ -49,8 +124,12 @@
             <br>
             <button id='submit'>Add</button>
         </form>
-        <div class="left"></div>
+        <div class="left">
+            <!-- <div class="lds-dual-ring hide"></div> -->
+        </div>
         <div class="right"></div>
+
     </div>
 </body>
+
 </html>
